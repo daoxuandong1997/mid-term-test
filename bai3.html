@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let age = parseInt(prompt("Nhập năm sinh của bạn vào đây: "));
+
+    if (caculateAge(age)==0){
+        alert("Không hợp lệ !");
+    }else alert("Tuổi của bạn là: "+ caculateAge(age));
+    function caculateAge(year) {
+        var d = new Date().getFullYear();
+        console.log(d);
+        if (year > d){
+            return 0;
+        }else {
+            return d - year;
+        }
+    }
+    console.log(caculateAge(age))
+</script>
+</body>
+</html>

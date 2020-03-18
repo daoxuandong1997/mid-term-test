@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="matrix"></p>
+<script>
+    var chieudai = parseInt(prompt("Nhập vào chiều dài ma trận: "));
+    var matran = [];
+    matran.length = chieudai;
+
+    for (let i = 0; i< chieudai; i++){
+        matran[i]=[];
+        for (let j = 0; j< chieudai; j++){
+            matran[i][j] = parseInt(prompt("Nhập giá trị vào vị trí "+"[ "+ i+" ]"+"[ "+j+" ]"));
+        }
+    }
+
+    console.log(matran);
+     function sum(array) {
+         let total = 0;
+         for ( let i = 0; i< chieudai;i++){
+             for (let j = 0; j< chieudai; j++){
+                 if (i == j){
+                     total += array[i][j];
+                 }
+             }
+         }
+         return total;
+     }
+     document.getElementById("matrix").innerHTML = "Tổng đường chéo chính là "+ sum(matran);
+</script>
+</body>
+</html>
